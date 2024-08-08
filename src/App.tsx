@@ -1,7 +1,8 @@
 // import { RandomColorGenerator } from "./challenges/random-color-generator"
 // import { StarRating } from "./challenges/star-rating"
+// import { ImageSlider} from "./challenges/image-slider"
 
-import { ImageSlider } from "./challenges/image-slider"
+import { TreeView } from "./challenges/tree-view"
 
 
 
@@ -10,8 +11,9 @@ function App() {
     <>
       {/* <RandomColorGenerator /> */}
       {/* <StarRating /> */}
+      {/* <ImageSlider /> */}
 
-      <ImageSlider />
+      <TreeView />
     </>
   )
 }

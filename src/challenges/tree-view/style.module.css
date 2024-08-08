@@ -1,0 +1,50 @@
+.container {
+  min-height: 100vh;
+  width: 420px;
+  padding: 2rem 3rem;
+
+  background-color: cadetblue;
+}
+
+.content {
+  list-style: none;
+}
+
+.content > .item {
+  margin-left: 1.5rem;
+}
+
+.item + .item,
+.item > .content {
+  margin-top: 10px
+}
+
+.item {
+  p,
+  button {
+    all: unset;
+  }
+}
+
+.item .item-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+}
+
+.item .item-button::after {
+  content: '+';
+  display: inline-block;
+  color: white;
+  font-size: 18px;
+}
+
+.item .item-button[data-toggle="true"]::after {
+  content: '';
+  height: 3px;
+  width: 15px;
+  background-color: white;
+  border-radius: 8px;
+}
