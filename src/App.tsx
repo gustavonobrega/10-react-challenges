@@ -1,9 +1,13 @@
-import { RandomColorGenerator } from "./challenges/random-color-generator"
+// import { RandomColorGenerator } from "./challenges/random-color-generator"
+
+import { StarRating } from "./challenges/star-rating"
 
 function App() {
   return (
     <>
-      <RandomColorGenerator />
+      {/* <RandomColorGenerator /> */}
+      
+      <StarRating />
     </>
   )
 }
