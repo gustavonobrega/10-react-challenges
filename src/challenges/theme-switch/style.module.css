@@ -1,0 +1,40 @@
+.container {
+  --bt-bg: #fff;
+  --bt-color: #000;
+
+  --bg-color: #000;
+  --text-color: #fff;
+
+  &.light {
+    --bt-bg: #000;
+    --bt-color: #fff;
+
+    --bg-color: #fff;
+    --text-color: #000;
+  }
+
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s;
+}
+
+.content {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+
+
+  button {
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: var(--bt-bg);
+    color: var(--bt-color);
+  }
+}
