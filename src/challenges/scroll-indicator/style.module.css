@@ -1,0 +1,42 @@
+.container {
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #013440;
+  border-bottom: 0.5rem solid #326A7C;
+  position: sticky;
+  top: 0;
+  
+  padding: 2rem;
+  text-align: center;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+
+  bottom: -0.5rem;
+  left: 0;
+
+  height: 0.5rem;
+  width: 0;
+
+  background-color: #fff;
+
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+.content {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+
+@keyframes scroll-watcher {
+  to {
+    width: 100%;
+  }
+}
