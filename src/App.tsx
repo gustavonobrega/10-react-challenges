@@ -3,9 +3,9 @@
 // import { ImageSlider} from "./challenges/image-slider"
 // import { TreeView } from "./challenges/tree-view"
 // import { ThemeSwitch } from "./challenges/theme-switch"
+// import { ScrollIndicator } from "./challenges/scroll-indicator"
 
-import { ScrollIndicator } from "./challenges/scroll-indicator"
-
+import { Tabs } from "./challenges/tabs"
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
       {/* <ImageSlider /> */}
       {/* <TreeView /> */}
       {/* <ThemeSwitch /> */}
+      {/* <ScrollIndicator /> */}
 
-      <ScrollIndicator />
-
+      <Tabs />
     </>
   )
 }
