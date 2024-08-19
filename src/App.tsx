@@ -4,8 +4,9 @@
 // import { TreeView } from "./challenges/tree-view"
 // import { ThemeSwitch } from "./challenges/theme-switch"
 // import { ScrollIndicator } from "./challenges/scroll-indicator"
+// import { Tabs } from "./challenges/tabs"
 
-import { Tabs } from "./challenges/tabs"
+import { TicTacToe } from "./challenges/tic-tac-toe"
 
 function App() {
   return (
@@ -16,8 +17,10 @@ function App() {
       {/* <TreeView /> */}
       {/* <ThemeSwitch /> */}
       {/* <ScrollIndicator /> */}
+      {/* <Tabs /> */}
 
-      <Tabs />
+      <TicTacToe />
+
     </>
   )
 }
