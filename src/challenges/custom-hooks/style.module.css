@@ -1,0 +1,29 @@
+.container {
+ 
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.fetch-hook {
+  & > p {
+    margin-top: 1rem;
+  }
+}
+
+.click-outside {
+  & div > p {
+    margin-top: 1rem;
+  }
+}
+
+.window-resize {
+  & > p {
+    margin-top: 1rem;
+  }
+}

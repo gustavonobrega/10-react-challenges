@@ -5,8 +5,9 @@
 // import { ThemeSwitch } from "./challenges/theme-switch"
 // import { ScrollIndicator } from "./challenges/scroll-indicator"
 // import { Tabs } from "./challenges/tabs"
+// import { TicTacToe } from "./challenges/tic-tac-toe"
 
-import { TicTacToe } from "./challenges/tic-tac-toe"
+import CustomHooks from "./challenges/custom-hooks"
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
       {/* <ThemeSwitch /> */}
       {/* <ScrollIndicator /> */}
       {/* <Tabs /> */}
+      {/* <TicTacToe /> */}
 
-      <TicTacToe />
+      <CustomHooks />
 
     </>
   )
