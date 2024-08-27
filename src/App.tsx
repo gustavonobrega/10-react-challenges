@@ -6,8 +6,9 @@
 // import { ScrollIndicator } from "./challenges/scroll-indicator"
 // import { Tabs } from "./challenges/tabs"
 // import { TicTacToe } from "./challenges/tic-tac-toe"
+// import CustomHooks from "./challenges/custom-hooks"
 
-import CustomHooks from "./challenges/custom-hooks"
+import Accordion from "./challenges/accordion"
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
       {/* <ScrollIndicator /> */}
       {/* <Tabs /> */}
       {/* <TicTacToe /> */}
+      {/* <CustomHooks /> */}
 
-      <CustomHooks />
+      <Accordion />
 
     </>
   )
