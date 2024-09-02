@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './style.module.css';
 
 type Color = {
@@ -7,10 +7,14 @@ type Color = {
 }
 
 export function RandomColorGenerator() {
-  const [color, setColor] = useState<Color | null>(null)
+  const [color, setColor] = useState<Color>(() => {
+    const randomHexColor = Math.floor(Math.random() * 16777215).toString(16);
+
+    return { type: 'HEX', value: `#${randomHexColor}` }
+  })
 
   function createHex() {
-    if (color?.type === 'HEX' || !color) {
+    if (color.type === 'HEX') {
       alert('The color is already HEX')
       return
     }
@@ -28,7 +32,7 @@ export function RandomColorGenerator() {
   }
 
   function createRgb() {
-    if (color?.type === 'RGB' || !color) {
+    if (color.type === 'RGB') {
       alert('The color is already RGB')
       return
     }
@@ -49,9 +53,7 @@ export function RandomColorGenerator() {
   }
 
   function generateColor() {
-    if (!color || color.type === 'HEX') {
-
-      // const randomHexColor = Math.floor(Math.random() * 16777215).toString(16);
+    if (color.type === 'HEX') {
 
       const hex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
 
@@ -69,12 +71,8 @@ export function RandomColorGenerator() {
     }
   }
 
-  useEffect(() => {
-    generateColor()
-  }, [])
-
   return (
-    <div className={styles.container} style={{ background: color?.value }} >
+    <div className={styles.container} style={{ background: color.value }} >
       <div className="menu">
         <button type="button" onClick={createHex} >Create HEX Color</button>
         <button type="button" onClick={createRgb}>Create RGB Color</button>
@@ -82,9 +80,9 @@ export function RandomColorGenerator() {
       </div>
 
       <div className={styles.content}>
-        <strong>{color?.type} Color</strong>
+        <strong>{color.type} Color</strong>
 
-        <h1>{color?.value}</h1>
+        <h1>{color.value}</h1>
       </div>
     </div>
   )
